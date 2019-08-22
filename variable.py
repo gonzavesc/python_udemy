@@ -19,3 +19,11 @@ print(my_string[:3])
 print(my_string[3:6])
 print(my_string[::2]) #The start stop step size!
 print(my_string[::-1])
+
+x = 'Hello World'
+a = x + ' it is beautiful outside'
+print(a)
+b = a.upper()
+print(b)
+c = x.split('o')
+print(c)
