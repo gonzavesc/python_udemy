@@ -27,3 +27,15 @@ b = a.upper()
 print(b)
 c = x.split('o')
 print(c)
+
+print("this is a string {}".format('INSERTED'))
+print("The {} {} {}".format('fox', 'brown', 'quick'))
+print("The {2} {1} {0}".format('fox', 'brown', 'quick'))
+print("The {q} {b} {f}".format(f='fox', b='brown', q='quick'))
+
+result = 100/777
+print(result)
+print("The result was {r:.3f}".format(r=result)) #value:with.precision f
+
+name = "Jose"
+print(f'Hello, his name is {name}') #formatted string literals
