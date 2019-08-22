@@ -39,3 +39,19 @@ print("The result was {r:.3f}".format(r=result)) #value:with.precision f
 
 name = "Jose"
 print(f'Hello, his name is {name}') #formatted string literals
+
+my_list = [1, 2, 3]
+print(len(my_list))
+my_list[0] = 24
+print(my_list)
+my_list.append(200)
+print(my_list)
+my_list.pop()
+print(my_list)
+my_list.pop(1)
+print(my_list)
+alfabet_list = ['a','i','b', 'h']
+alfabet_list.sort()
+print(alfabet_list)
+alfabet_list.reverse()
+print(alfabet_list)
