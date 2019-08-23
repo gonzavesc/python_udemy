@@ -85,3 +85,15 @@ print(t.index('a'))
 mylist[0] = 'new'
 print(mylist)
 # t[0] = 'new' this cannot be done!!!
+
+#sets unordered of unique elements
+
+myset = set()
+
+myset.add(1)
+print(myset)
+myset.add(2)
+myset.add(2)
+print(myset)
+mylist = [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3]
+print(set(mylist))
