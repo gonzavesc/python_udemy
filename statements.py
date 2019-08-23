@@ -34,3 +34,19 @@ for item in d:
 	print(item) #only oututs keys
 for item in d.items():
 	print(item)
+for item in d.values():
+	print(item)
+
+i = 0
+while(i <10):
+	i+=1
+	print(i)
+
+x = [1,2,3]
+for item in x:
+	pass # pass does nothing at all
+	if item == 1:
+		continue # jumps to next iteration
+	else:
+		print(item)
+		break #exits iteration
