@@ -55,3 +55,20 @@ alfabet_list.sort()
 print(alfabet_list)
 alfabet_list.reverse()
 print(alfabet_list)
+
+#Dictionaries!!!
+my_dict = {'key1':'value1', 'key2':'value2'}
+print(my_dict)
+print(my_dict['key1'])
+prices = {'apples':1.98,'melons':1.32,'milk':2.5}
+print(prices['apples'])
+d = {'k1':123,'k2':[0,1,2],'k3':{'insidekey':100}} #keys are strings but values 
+# can be anything
+print(d['k3']['insidekey'])
+print(d['k2'][2])
+d = {'k1':100, 'k2':200}
+d['k3'] = 300
+print(d)
+print(d.keys())
+print(d.values())
+print(d.items()) # returns a tuple
