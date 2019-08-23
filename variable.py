@@ -71,4 +71,17 @@ d['k3'] = 300
 print(d)
 print(d.keys())
 print(d.values())
-print(d.items()) # returns a tuple
+print(d.items()) # returns a list with tuple
+
+#tuples
+
+t = (1, 2, 3)
+mylist = [1, 2, 3]
+print(type(t))
+print(len(t))
+t = ('a', 'a', 'b')
+print(t.count('a'))
+print(t.index('a'))
+mylist[0] = 'new'
+print(mylist)
+# t[0] = 'new' this cannot be done!!!
