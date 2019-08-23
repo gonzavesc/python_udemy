@@ -103,3 +103,37 @@ True
 False
 
 print(1==1)
+# i/o with files in python
+
+myfile = open('myfile.txt')
+
+print(myfile.read()) #reads everything!! cursor moves to the end
+print(myfile.read())
+myfile.seek(0) # move cursor to the begining
+print(myfile.read())
+myfile.seek(0)
+print(myfile.readlines()[:]) #returns a list with all the lines
+myfile.close()
+
+with open('myfile.txt') as my_new_file:
+	#this indented code has the file open, do not worry about closing the files
+	contents = my_new_file.read()
+	print(contents)
+
+# mode r read only
+# mode w overwrite or creates new file
+# etc...
+
+with open('myfile.txt',mode='a') as fil:
+	print('hey')
+with open('my_new_file.txt', mode='r') as f:
+	print(f.read())
+with open('my_new_file.txt', mode='a') as f:
+	f.write('\nFOUR ON FOURTH')
+
+with open('my_new_file.txt', mode='r') as f:
+	print(f.read())
+with open('fagasgfda.txt', mode='w') as f:
+	f.write('I CREATED THIS FILE!')
+with open('fagasgfda.txt', mode='r') as f:
+	print(f.read())
