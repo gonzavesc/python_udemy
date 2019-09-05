@@ -192,3 +192,18 @@ def func_2(x):
 	return x
 # do the reassignment like this
 x = func_2(x)
+def vol(rad):
+	return 4/3*3.14*rad**3
+def up_low(s):
+	upp = 0
+	low = 0
+	for c in s:
+		if c.isupper():
+			upp+=1
+		elif c.islower():
+			low+=1
+		else:
+			pass
+	print("Number of upper is {}".format(upp))
+	print("Number of lower is {}".format(low))
+up_low('Hello Mr You')
