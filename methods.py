@@ -73,3 +73,16 @@ myfunc(fruit='apple', veggie='lettuce')
 def myfunc(a,*args, **kwargs):
 	print('I would like {} {} {}'.format(a, args[0], kwargs['food']))
 myfunc(23,14,food='omelette')
+def lesser_of_two_evens(a,b):
+	if a%2==0 and b%2==0:
+		return min(a,b)
+	else:
+		return max(a,b)
+print(lesser_of_two_evens(2,4))
+print(lesser_of_two_evens(2,5))
+
+def animal_crackers(text):
+	mylist = (text.split())
+	return mylist[0][0].lower() == mylist[1][0].lower()
+print(animal_crackers('turtle Tortoise'))
+print(animal_crackers('hey ping'))
