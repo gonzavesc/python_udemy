@@ -173,3 +173,22 @@ out = list(filter(check_even, mynums))
 print(out)
 lambda num: num **2
 print(list(map(lambda num: num**2, mynums))) #lambda just sets a function without name
+x = 100
+def printer():
+	x = 10
+	print(x)
+print(x)
+printer()
+print(x)
+
+def func():
+	global x # very dangerous!!!avoid
+	x = 200
+	print(x)
+func()
+print(x)
+def func_2(x):
+	x = 10
+	return x
+# do the reassignment like this
+x = func_2(x)
