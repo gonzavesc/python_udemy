@@ -163,3 +163,13 @@ def square(num):
 my_nums = [1,2,3,4,5]
 for item in map(square, my_nums):
 	print(item)
+outputs = list(map(square,my_nums))
+print(outputs)
+
+def check_even(num):
+	return num%2 == 0
+mynums = [1,2,3,4,5,6,7,8]
+out = list(filter(check_even, mynums))
+print(out)
+lambda num: num **2
+print(list(map(lambda num: num**2, mynums))) #lambda just sets a function without name
