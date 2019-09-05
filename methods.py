@@ -158,3 +158,8 @@ def count_primes(num):
 	return len(primes)
 print(count_primes(2000))
 #check out the eulerproject!!!!
+def square(num):
+	return num**2
+my_nums = [1,2,3,4,5]
+for item in map(square, my_nums):
+	print(item)
