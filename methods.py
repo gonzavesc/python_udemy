@@ -86,3 +86,19 @@ def animal_crackers(text):
 	return mylist[0][0].lower() == mylist[1][0].lower()
 print(animal_crackers('turtle Tortoise'))
 print(animal_crackers('hey ping'))
+
+def old_macdonald(name):
+	first_letter = name[0]
+	inbetween = name[1:3]
+	fourth_letter = name[3]
+	rest = name[4:]
+	first_half = name[:3]
+	second_half = name[3:] # can use the capitalize!!!
+	return first_letter.upper()+inbetween+fourth_letter.upper()+rest
+print(old_macdonald('macdonald'))
+
+def master_yode(text):
+	wordlist = text.split()
+	reversed_word = wordlist[::-1]
+	return ' '.join(reversed_word)
+print(master_yode('hello i am'))
