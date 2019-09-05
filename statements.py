@@ -92,3 +92,17 @@ print(randint(0,101))
 
 result = input('Enter a number here: ') # always are strings!!!
 result = float(result)
+#list comprehensions
+mylist = [x for x in range(0,11)]
+print(mylist)
+mylist = [x**2 for x in range(0,11) if x%2==0] # gets rid of append
+print(mylist)
+results = [x if x%2==0 else 'ODD' for x in range(0,11)]
+print(results)
+mylist = []
+for x in [2,4,6]:
+	for y in [100,200,300]:
+		mylist.append(x*y)
+print(mylist)
+mylist = [x*y for x in [2,4,6] for y in [100,200,300]]
+print(mylist)
