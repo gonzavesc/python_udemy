@@ -100,5 +100,35 @@ print(old_macdonald('macdonald'))
 def master_yode(text):
 	wordlist = text.split()
 	reversed_word = wordlist[::-1]
-	return ' '.join(reversed_word)
+	return ' '.join(reversed_word) #joins using the character between ' '
 print(master_yode('hello i am'))
+
+def has_33(nums):
+	for i in range(0, len(nums)-1):
+		if nums[i] ==3 and nums[i+1] == 3: # if nums[i:i+2] == [3,3]
+			return True
+	return False
+def paper_doll(text):
+	result = ''
+	for char in text:
+		result += char * 3
+	return result
+print(paper_doll('hey'))
+def summer_69(arr):
+	sum = 0
+	add = True
+	for num in arr:
+		while add:
+			if num != 6:
+				sum += num
+				break
+			else:
+				add = False
+		while not add:
+			if num != 9:
+				break
+			else:
+				add = True
+				break
+	return sum
+print(summer_69([1,2,3,4,5,6,7,8,9,10]))
