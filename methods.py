@@ -49,3 +49,27 @@ def pig_latin(word):
 		pig_word = word[1:] + first_letter + 'ay'
 	return pig_word
 print(pig_latin('hello'))
+#*args and **kwargs in python arguments and key words arguments
+def my_func(a,b,c=0,d=0):
+	# returns 5% of the sum of a and b
+	return sum((a,b,c,d))*0.05
+print(my_func(40,60,d=10)) # can only put d= if it's set as a keyword!!
+def myfunc(*args): #puts args in a tuple!!
+	print(args)
+	return sum(args)*0.05
+print(myfunc(40,60,12,23,55325,65326,63,1))
+def myfunc(*values): #the word after * can be anything, but always use args!!!!!
+	print(values)
+	return sum(args)*0.05
+
+def myfunc(**kwargs):
+	print(kwargs)
+	if 'fruit' in kwargs: # kwargs is a dictionary!!
+		print('My fruit of choice is {}'.format(kwargs['fruit']))
+	else:
+		print('I did not find any fruit here')
+myfunc(fruit='apple', veggie='lettuce')
+
+def myfunc(a,*args, **kwargs):
+	print('I would like {} {} {}'.format(a, args[0], kwargs['food']))
+myfunc(23,14,food='omelette')
