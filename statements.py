@@ -106,3 +106,13 @@ for x in [2,4,6]:
 print(mylist)
 mylist = [x*y for x in [2,4,6] for y in [100,200,300]]
 print(mylist)
+#fizzbuzz
+for num in range(1,101):
+	mystring = ''
+	if num%3==0:
+		mystring = mystring + 'Fizz'
+	if num%5==0:
+		mystring = mystring + 'Buzz'
+	if num%3!=0 and num%5!=0:
+		mystring = num
+	print(mystring)
