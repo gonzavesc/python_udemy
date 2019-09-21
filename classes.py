@@ -37,3 +37,68 @@ class Circle():
         return self.radius * Circle.pi * 2 #Class object atribute can be called like this
 my_circle = Circle(10)
 print(my_circle.get_circumference())
+
+class Animal():
+    def __init__(self):
+        print ("Animal Created")
+    def who_am_i(self):
+        print("I am an animal")
+    def eat(self):
+        print ("I am eating")
+
+my_animal = Animal()
+class Dog(Animal): #derived class
+    def __init__(self):
+        Animal.__init__(self)
+        print("Dog created")
+    def eat(self):
+        print("The dog is eating")
+    def bark(self):
+        print("WOOF!")
+my_dog = Dog()
+my_dog.who_am_i() #Can use it because it is inherited!
+my_dog.eat()
+
+class Dog():
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        return self.name + " woof!"
+class Cat():
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        return self.name + " mewo!"
+
+niko = Dog("niko")
+felix = Cat("felix")
+print(niko.speak())
+print(felix.speak())
+
+for pet in [niko, felix]:
+    print(type(pet))
+    print(pet.speak()) #Same method name but different output
+def pet_speak(pet):
+    print(pet.speak())
+
+pet_speak(niko)
+pet_speak(felix)
+#abstract classes, is a base class for others to inherit
+class Animal():
+    def __init__(self,name):
+        self.name = name
+    def speak(self):
+        raise NotImplementedError("subclass must implement this abstract method") # should modify in the in
+        #inherited class!!
+my_animal = Animal('fred')
+#my_animal.speak()
+class Dog(Animal):
+    def speak(self):
+        return self.name + " says woof!"
+class Cat(Animal):
+    def speak(self):
+        return self.name + " says meow"
+fido = Dog("fido")
+isis = Cat('isis')
+print(isis.speak())
+print(fido.speak())
