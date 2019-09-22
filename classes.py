@@ -119,3 +119,27 @@ b = Book("Python", "Jose", 200)
 print(b)
 print(len(b))
 del b #deletes variable from memory
+
+class Account():
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+    def __str__(self):
+        return "Account owner: {}\nAccount balance: {}".format(self.owner,self.balance)
+    def withdraw(self, quantity):
+        if quantity > self.balance:
+            print("Withdraw not possible")
+        else:
+            self.balance = self.balance - quantity
+            print("Withdraw accepted")
+    def deposit(self, quantity):
+        print("Deposit accepted")
+        self.balance = self.balance + quantity
+acct1 = Account("Jose", 100)
+print(acct1)
+acct1.deposit(200)
+print(acct1)
+acct1.withdraw(250)
+print(acct1)
+acct1.withdraw(200)
+print(acct1)
