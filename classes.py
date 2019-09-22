@@ -102,3 +102,20 @@ fido = Dog("fido")
 isis = Cat('isis')
 print(isis.speak())
 print(fido.speak())
+
+#USe python methods on our classes
+class Book():
+    def __init__(self,title,author,pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    def __str__(self): #when a method asks for a string, returns thus
+        return f"{self.title} by {self.author}"
+    def __len__(self):
+        return self.pages
+    def __del__(self):
+        print("A book object has been deleted")
+b = Book("Python", "Jose", 200)
+print(b)
+print(len(b))
+del b #deletes variable from memory
